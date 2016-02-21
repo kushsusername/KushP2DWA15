@@ -1,0 +1,17 @@
+body {
+  margin: 5px;
+  background: #555555;
+}
+
+.container {
+  background: #FFFFFF;
+}
+
+img {
+  margin-bottom: 12px;
+}
+
+.disabledLink {
+  pointer-events: none;
+  cursor: default;
+}
