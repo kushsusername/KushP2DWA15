@@ -1,3 +1,8 @@
+<?php
+error_reporting(-1); # Report all PHP errors
+ini_set('display_errors', 1);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,7 @@
   <script src="js/jquery-1.12.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  <?php require 'logic.php'; ?>
 </head>
 
 <body>
@@ -61,6 +67,14 @@
             <a class="list-group-item disabledLink" href="http://p4.kushsdwa15.xyz/">Project 4<span class="badge">Coming Soon</span></a>
           </div>
         </div>
+        <div class="col-md-4">
+          <div class="list-group">
+            <a class="list-group-item" href="https://github.com/kushsusername/KushP1DWA15">Project 1 Github</a>
+            <a class="list-group-item" href="https://github.com/kushsusername/KushP2DWA15">Project 2 Github</a>
+            <a class="list-group-item disabledLink" href="https://github.com/kushsusername/KushP3DWA15">Project 3<span class="badge">Coming Soon</span></a>
+            <a class="list-group-item disabledLink" href="https://github.com/kushsusername/KushP4DWA15">Project 4<span class="badge">Coming Soon</span></a>
+          </div>
+        </div>
       </div>
       <div class="tab-pane fade <?php echo $whichPage=='project1' ? ' active in' : ''?>" id="profile">
           <h2>Profile</h2>
@@ -83,8 +97,26 @@
             </div>
           </div>
       </div>
-      <div div class="tab-pane fade <?php echo $whichPage=='project1' ? ' active in' : ''?>" id="project2">
-
+      <div div class="tab-pane fade <?php echo $whichPage=='project2' ? ' active in' : ''?>" id="project2">
+        <h2>XKCD Password Generator</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <form method='POST' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+          		<input class="form-control" placeholder="Word Count" type='text' name='wordcount'><br>
+          		<input class="form-control" placeholder="Number Count" type='text' name='numbercount'><br>
+              <select name="symbol">
+                <option value="TRUE">Include Symbol</option>
+                <option value="FALSE">Exclude Symbol</option>
+              </select>
+          		<input class="btn btn-default" type='submit' value='Generate Password'>
+          	</form>
+            <br>
+          </div>
+          <div class="col-md-4">
+            <h3><?php echo $xkcdpassword ? "Your Generated Password is:" : ""?>
+            <h4><?php echo $xkcdpassword ? $xkcdpassword : ""?></h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>
