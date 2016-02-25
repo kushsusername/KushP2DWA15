@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 <html lang="en">
 <head>
   <?php require 'logic.php'; ?>
-  <title>Project1</title>
+  <title><?php echo $title ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,18 +20,7 @@ ini_set('display_errors', 1);
 </head>
 
 <body>
-  <?php
-    $whichPage = "home";
-    if($_SERVER['SERVER_NAME'] == "p1.kushsdwa15.xyz") {
-      $whichPage = "project1";
-    } elseif ($_SERVER['SERVER_NAME'] == "p2.kushsdwa15.xyz") {
-      $whichPage = "project2";
-    } elseif ($_SERVER['SERVER_NAME'] == "p3.kushsdwa15.xyz") {
-      $whichPage = "project3";
-    } elseif ($_SERVER['SERVER_NAME'] == "p4.kushsdwa15.xyz") {
-      $whichPage = "project4";
-    }
-  ?>
+
   <div class="container">
 
     <!-- Nav tabs -->
