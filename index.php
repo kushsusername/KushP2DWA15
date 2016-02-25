@@ -92,8 +92,8 @@ ini_set('display_errors', 1);
         <div class="row">
           <div class="col-md-4">
             <form method='POST' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
-          		<input class="form-control" placeholder="Word Count 1-10" type='text' name='wordcount'><br>
-          		<input class="form-control" placeholder="Number Count 1-10" type='text' name='numbercount'><br>
+          		<input class="form-control" placeholder="Word Count: 1-10" type='text' name='wordcount'><br>
+          		<input class="form-control" placeholder="Number Count: 1-10" type='text' name='numbercount'><br>
               <select name="symbol">
                 <option value="TRUE">Include Symbol</option>
                 <option value="FALSE">Exclude Symbol</option>
