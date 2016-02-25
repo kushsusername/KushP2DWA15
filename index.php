@@ -88,7 +88,10 @@ ini_set('display_errors', 1);
           </div>
       </div>
       <div class="tab-pane fade <?php echo $whichPage=='project2' ? ' active in' : ''?>" id="project2">
-        <h2>XKCD Password Generator</h2>
+        <h2><u>XKCD Password Generator</u></h2>
+        <p> This is a password generator that will combine words known to the system along with some numbers and a symbol to give you a password.</p>
+        <p> The word length is random because the words are random, and you can customize the number of words as well as the number of digits.</p>
+        <p> The symbols available are: !,@,#,$,%,&amp;.</p>
         <div class="row">
           <div class="col-md-4">
             <form method='POST' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
