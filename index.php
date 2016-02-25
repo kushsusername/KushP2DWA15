@@ -80,7 +80,7 @@ ini_set('display_errors', 1);
           <h2>Profile</h2>
           <div class="row">
             <div class="col-md-6">
-              <img src='images/profile_pic.jpg' height="400" width="400">
+              <img src='images/profile_pic.jpg' height="400" width="400" alt="my photo">
             </div>
             <div class="col-md-6">
               <h4><b><u>BIO:</u></b></h4>
@@ -97,7 +97,7 @@ ini_set('display_errors', 1);
             </div>
           </div>
       </div>
-      <div div class="tab-pane fade <?php echo $whichPage=='project2' ? ' active in' : ''?>" id="project2">
+      <div class="tab-pane fade <?php echo $whichPage=='project2' ? ' active in' : ''?>" id="project2">
         <h2>XKCD Password Generator</h2>
         <div class="row">
           <div class="col-md-4">
@@ -113,7 +113,7 @@ ini_set('display_errors', 1);
             <br>
           </div>
           <div class="col-md-4">
-            <h3><?php echo $xkcdpassword ? "Your Generated Password is:" : ""?>
+            <h3><?php echo $xkcdpassword ? "Your Generated Password is:" : ""?></h3>
             <h4><?php echo $xkcdpassword ? $xkcdpassword : ""?></h4>
           </div>
         </div>
