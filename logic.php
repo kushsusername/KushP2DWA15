@@ -77,7 +77,7 @@
         $xkcdpassword .= rand(0,9);
         $numbercount --;
       }
-      if ($symbol == TRUE) {
+      if ($symbol == "TRUE") {
         $xkcdpassword .= $symbols[rand(0,5)];
       }
     }
