@@ -35,22 +35,35 @@
   $symbols = array('!','@','#','$',"%","&");
 
   $xkcdpassword = "";
+  $error = "";
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $wordcount = $_POST["wordcount"];
     $numbercount = $_POST["numbercount"];
     $symbol = $_POST["symbol"];
 
-    while ($wordcount > 0) {
-      $xkcdpassword .= $words[rand(0,249)];
-      $wordcount--;
+    if (!(is_int($wordcount))){
+      $error .= "Input value for word count is not a valid integer. \n";
+    } elseif ($wordcount < 1 || $wordcount > 10) {
+      $error .= "Word count must be at least 1 and less than 10. \n";
     }
-    while ($numbercount > 0) {
-      $xkcdpassword .= rand(0,9);
-      $numbercount --;
+    if (!(is_int($numbercount))){
+      $error .= "Input value for number count is not a valid integer. \n";
+    } elseif ($numbercount < 1 || $numbercount > 10) {
+      $error .= "Number count must be at least 1 and less than 10. \n";
     }
-    if ($symbol == TRUE) {
-      $xkcdpassword .= $symbols[rand(0,5)];
+    if ($error == "") {
+      while ($wordcount > 0) {
+        $xkcdpassword .= $words[rand(0,249)];
+        $wordcount--;
+      }
+      while ($numbercount > 0) {
+        $xkcdpassword .= rand(0,9);
+        $numbercount --;
+      }
+      if ($symbol == TRUE) {
+        $xkcdpassword .= $symbols[rand(0,5)];
+      }
     }
   }
-
 ?>

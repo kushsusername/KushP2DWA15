@@ -102,8 +102,8 @@ ini_set('display_errors', 1);
         <div class="row">
           <div class="col-md-4">
             <form method='POST' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
-          		<input class="form-control" placeholder="Word Count" type='text' name='wordcount'><br>
-          		<input class="form-control" placeholder="Number Count" type='text' name='numbercount'><br>
+          		<input class="form-control" placeholder="Word Count 1-10" type='text' name='wordcount'><br>
+          		<input class="form-control" placeholder="Number Count 1-10" type='text' name='numbercount'><br>
               <select name="symbol">
                 <option value="TRUE">Include Symbol</option>
                 <option value="FALSE">Exclude Symbol</option>
@@ -112,7 +112,9 @@ ini_set('display_errors', 1);
           	</form>
             <br>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-8">
+            <h3><?php echo $error ? "Your Input has the following errors:" : ""?></h3>
+            <h5><?php echo $error ? $error : ""?></h5>
             <h3><?php echo $xkcdpassword ? "Your Generated Password is:" : ""?></h3>
             <h4><?php echo $xkcdpassword ? $xkcdpassword : ""?></h4>
           </div>
