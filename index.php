@@ -6,6 +6,7 @@ ini_set('display_errors', 1);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <?php require 'logic.php'; ?>
   <title>Project1</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +16,7 @@ ini_set('display_errors', 1);
   <script src="js/jquery-1.12.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  <?php require 'logic.php'; ?>
+
 </head>
 
 <body>

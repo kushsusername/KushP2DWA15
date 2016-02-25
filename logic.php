@@ -1,5 +1,21 @@
 <?php
 
+  $whichPage = "home";
+  $title = "Home";
+  if($_SERVER['SERVER_NAME'] == "p1.kushsdwa15.xyz") {
+    $whichPage = "project1";
+    $title = "Project 1";
+  } elseif ($_SERVER['SERVER_NAME'] == "p2.kushsdwa15.xyz") {
+    $whichPage = "project2";
+    $title = "Project 2";
+  } elseif ($_SERVER['SERVER_NAME'] == "p3.kushsdwa15.xyz") {
+    $whichPage = "project3";
+    $title = "Project 3";
+  } elseif ($_SERVER['SERVER_NAME'] == "p4.kushsdwa15.xyz") {
+    $whichPage = "project4";
+    $title = "Project 4";
+  }
+
   $words = array('condition','nippy','lettuce','subsequent','cap','tenuous',
   'obese','surround','ill','known','awake','bells','drain','toes','hope','fancy',
   'impossible','leg','beef','furtive','hole','double','cactus','stranger',
