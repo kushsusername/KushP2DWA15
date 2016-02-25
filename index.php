@@ -15,13 +15,13 @@
 <body>
   <?php
     $whichPage = "home";
-    if($_SERVER['SERVER_NAME'] == "http://p1.kushsdwa15.xyz/") {
+    if($_SERVER['SERVER_NAME'] == "p1.kushsdwa15.xyz") {
       $whichPage = "project1";
-    } elseif ($_SERVER['SERVER_NAME'] == "http://p2.kushsdwa15.xyz/") {
+    } elseif ($_SERVER['SERVER_NAME'] == "p2.kushsdwa15.xyz") {
       $whichPage = "project2";
-    } elseif ($_SERVER['SERVER_NAME'] == "http://p3.kushsdwa15.xyz/") {
+    } elseif ($_SERVER['SERVER_NAME'] == "p3.kushsdwa15.xyz") {
       $whichPage = "project3";
-    } elseif ($_SERVER['SERVER_NAME'] == "http://p4.kushsdwa15.xyz/") {
+    } elseif ($_SERVER['SERVER_NAME'] == "p4.kushsdwa15.xyz") {
       $whichPage = "project4";
     }
   ?>
