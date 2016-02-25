@@ -58,12 +58,12 @@
     $numbercount = $_POST["numbercount"];
     $symbol = $_POST["symbol"];
 
-    if (!(is_int($wordcount))){
+    if (!(is_int(intval($wordcount)))){
       $error .= "Input value for word count is not a valid integer. \n";
     } elseif ($wordcount < 1 || $wordcount > 10) {
       $error .= "Word count must be at least 1 and less than 10. \n";
     }
-    if (!(is_int($numbercount))){
+    if (!(is_int(intval($numbercount)))){
       $error .= "Input value for number count is not a valid integer. \n";
     } elseif ($numbercount < 1 || $numbercount > 10) {
       $error .= "Number count must be at least 1 and less than 10. \n";
